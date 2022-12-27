@@ -1,0 +1,33 @@
+@import './../../App.scss';
+
+div.historial-screen {
+    min-height: 100px;
+    height: min(100%, 60%);
+    background-color: $color3;
+    position: relative;
+
+    & ul {
+        width: 100%;
+        margin-bottom: 10px;
+        position: absolute;
+        bottom: 0;
+        & li {
+            display: flex;
+            padding: 5px 20px;
+            background-color: $color2;
+            margin-bottom: 3px;
+            &:hover {
+                filter: contrast(200%);
+            }
+            & p {
+                font-size: 22px;
+                width: 100%;
+                text-align: right;
+
+                &:first-child {
+                    text-align: left;
+                }
+            }
+        }
+    }
+}

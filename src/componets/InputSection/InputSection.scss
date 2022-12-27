@@ -1,0 +1,22 @@
+@import './../../App.scss';
+
+
+.input-section {
+    margin-bottom: 10px;
+    background-color: $color2;
+    border-radius: 10px 10px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 25px;
+    input {
+        height: 40px;
+        padding: 0 10px;
+        
+        font-size: 25px;
+        background-color: $color2;
+        outline: none !important;
+        border: none !important;
+        box-shadow: none !important;
+        box-sizing: none !important;
+    }
+}

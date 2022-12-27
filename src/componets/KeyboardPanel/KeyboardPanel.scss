@@ -1,0 +1,28 @@
+@import './../../App.scss';
+
+table.keyboard-panel {
+    width: 100%;
+    
+    & button {
+        --btn-height: 42px;
+        width: 100%;
+        height: var(--btn-height);
+        background-color: $color2;
+        border: none;
+        box-shadow: none;
+        border-radius: 6px;
+        font-size: 16px;
+        font-weight: 500;
+        &.number {
+            background-color: $color3;
+        }
+        &:hover {
+            filter: contrast(200%);
+        }
+    }
+
+    & tr:nth-last-child(2) td:last-child button {
+        background-color: orange;
+        height: calc(var(--btn-height) * 2);
+    }
+}

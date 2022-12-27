@@ -1,0 +1,15 @@
+$header: #444444;
+$color1: #505050;
+$color2: #717171;
+$color3: #949393;
+
+.container {
+    margin: auto;
+    min-width: 300px;
+    width: min(100%, 700px);
+    height: calc(100vh - 48px);
+}
+
+body { 
+    background-color: $color1;
+}
