@@ -1,10 +1,36 @@
 @import './../../App.scss';
 
 .calculator-header {
-    background-color:$header;
+    background-color: $header;
     height: 48px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 10px;
+
+    & button {
+        background-color: $header;
+        border: none;
+        font-weight: 500;
+        padding: 5px 8px;
+        display: flex;
+        border-radius: 4px;
+        gap: 3px;
+
+        &:hover {
+            filter: brightness(1.2);
+        }
+
+        &:active {
+            filter: brightness(1.5);
+        }
+
+        & svg {
+            font-size: 16px;
+        }
+    }
+
+    & svg {
+        font-size: 23px;
+    }
 }

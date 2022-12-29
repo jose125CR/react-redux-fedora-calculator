@@ -22,9 +22,9 @@ const HistorialScreen = () => {
                     historialList.map(({operation, result}) => {
                         return (
                             <li key={"row-history" + result} onClick={() => rowCliked(operation)}>
-                                <p>{operation}</p>
-                                <p>=</p>
-                                <p>{result}</p>
+                                <p className="operation">{operation}</p>
+                                <p className="equal">=</p>
+                                <p className="result">{result}</p>
                             </li>
                         )
                     })

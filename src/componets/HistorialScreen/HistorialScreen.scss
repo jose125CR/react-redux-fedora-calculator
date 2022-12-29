@@ -1,31 +1,69 @@
 @import './../../App.scss';
 
 div.historial-screen {
-    min-height: 100px;
-    height: min(100%, 60%);
+    margin-top: 10px;
+    position: absolute;
+    width: 100%;
+    bottom: 304px;
+    top: 0;
     background-color: $color3;
-    position: relative;
+    border-radius: 10px 10px 0 0;
+    overflow-y: auto;
+
+    /* width */
+    &::-webkit-scrollbar {
+        width: 3px;
+        background: transparent;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+        display: none;
+    }
+
+    &:hover {
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb {
+            background: $color1;
+            border-radius: 50px;
+        }
+    }
 
     & ul {
         width: 100%;
         margin-bottom: 10px;
         position: absolute;
+        max-height: 100%;
         bottom: 0;
+
         & li {
             display: flex;
             padding: 5px 20px;
             background-color: $color2;
             margin-bottom: 3px;
+
             &:hover {
                 filter: contrast(200%);
             }
+
             & p {
                 font-size: 22px;
                 width: 100%;
                 text-align: right;
+                text-overflow: ellipsis;
+                overflow: hidden;
 
-                &:first-child {
+                &.operation {
                     text-align: left;
+                }
+
+                &.equal {
+                    width: 50px;
+                    text-align: center;
+                }
+
+                &.result {
+                    max-width: 31%;
                 }
             }
         }

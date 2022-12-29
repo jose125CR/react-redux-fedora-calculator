@@ -2,9 +2,9 @@ import { ActionType, getType } from 'typesafe-actions';
 import * as calculatorActionsCreators from '../actionsCreators/actionsCreators';
 
 export const initialCalculatorState = {
-    inputValue: '0',
+    inputValue: '',
     historial: [],
-    error: 'Error',
+    error: '',
     inputTargetPosition: 0
 };
 
@@ -42,6 +42,9 @@ export const calculatorReducer = (
 
         case getType(calculatorActionsCreators.handleHistoryRowCliked):
             return { ...state, inputValue: action.payload.result };
+
+        case getType(calculatorActionsCreators.handleCleanInput):
+            return { ...state, inputValue: '' };
 
         default:
             return state;

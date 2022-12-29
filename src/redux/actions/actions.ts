@@ -49,15 +49,15 @@ export const handleHistoryRowCliked = (result: string) => async (
   calculatorActionCreators.handleHistoryRowCliked(result),
 );
 
-const rex = new RegExp(/²/g)
-
 const cleanTheValue = (dirtyValue: string) => {
   return dirtyValue
     .replace(/²/g, '^2')
+    .replace(/π/g, 'pi ')
     .replace(/÷/g, '/')
+    .replace(/−/g, '-')
     .replace(/mod/g, 'mod ')
     .replace(/×/g, '*')
-    .replace(/√(\d+\.?\d+|\([\(\)0-9\+\*-\/]*\))/g, "sqrt($1)")
+    .replace(/√([\d^²]*[.,]?\d+|\([(mod|pi)0-9\(\)%.,^²\s*\/+-]*\))?/g, "sqrt($1)")
 }
 
 export const handleKeyEqualPresset = () => async (
@@ -105,4 +105,10 @@ export const handleHasErrors = (error: string) => async (
   dispatch: any,
 ) => dispatch(
   calculatorActionCreators.handleHasErrors(error),
+);
+
+export const handleCleanInput= () => async (
+  dispatch: any,
+) => dispatch(
+  calculatorActionCreators.handleCleanInput(),
 );

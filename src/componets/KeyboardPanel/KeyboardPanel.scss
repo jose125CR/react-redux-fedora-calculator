@@ -2,6 +2,11 @@
 
 table.keyboard-panel {
     width: 100%;
+    position: absolute;
+    bottom: 10px;
+    & td {
+        width: 1%;
+    }
     
     & button {
         --btn-height: 42px;

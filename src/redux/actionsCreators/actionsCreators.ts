@@ -15,3 +15,5 @@ export const handleKeyEqualPressed = createAction("calculator/KEY_EQUAL_PRESSET"
 export const handleHistoryRowCliked = createAction("calculator/HISTORY_ROW_CLICKED", resolve => (result: string) => resolve({result}))
 
 export const handleHasErrors = createAction("calculator/OPERATION_HAS_ERRORS", resolve => (error: string) => resolve({error}))
+
+export const handleCleanInput = createAction("calculator/CLEAN_INPUT", resolve => () => resolve())

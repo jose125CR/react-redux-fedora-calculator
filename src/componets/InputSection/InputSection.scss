@@ -2,21 +2,30 @@
 
 
 .input-section {
-    margin-bottom: 10px;
+    position: absolute;
+    width: 100%;
+    bottom: 238px;
     background-color: $color2;
     border-radius: 10px 10px;
     display: flex;
     flex-direction: column;
-    padding-bottom: 25px;
+    padding-bottom: 5px;
     input {
         height: 40px;
         padding: 0 10px;
-        
+        margin-bottom: 5px;
         font-size: 25px;
         background-color: $color2;
         outline: none !important;
         border: none !important;
         box-shadow: none !important;
         box-sizing: none !important;
+    }
+
+    span {
+        --error-font-size: 14px;
+        font-size: var(--error-font-size);
+        min-height: calc(var(--error-font-size) + 2px);
+        padding: 0 10px;
     }
 }
